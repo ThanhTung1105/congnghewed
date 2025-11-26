@@ -9,7 +9,7 @@ if (isset($_POST['submit'])) {
             fgetcsv($handle); // Bỏ qua dòng tiêu đề
             
             while (($data = fgetcsv($handle)) !== FALSE) {
-                // $data là mảng các cột tương ứng trong CSV
+                // $data là mảng các cột tương ứng  CSV
                 $user = $conn->real_escape_string($data[0]);
                 $pass = $conn->real_escape_string($data[1]);
                 $last = $conn->real_escape_string($data[2]);
@@ -33,4 +33,5 @@ if (isset($_POST['submit'])) {
     <h3>Upload file Danh sách (CSV)</h3>
     <input type="file" name="file_csv" required>
     <button type="submit" name="submit">Lưu vào CSDL</button>
+
 </form>
