@@ -1,5 +1,5 @@
 <?php
-// === THIẾT LẬP KẾT NỐI PDO ===
+
 $host = '127.0.0.1'; 
 $dbname = 'cse485_web'; 
 $username = 'root'; 
@@ -94,3 +94,4 @@ $stmt_select = $pdo->query($sql_select);
 </body>
 
 </html>
+
