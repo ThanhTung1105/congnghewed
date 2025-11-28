@@ -1,0 +1,3 @@
+Hãy giải thích SQL Injection là gì? Tại sao việc cộng chuỗi INSERT INTO sinhvien (ten)
+VALUES ('$ten') lại nguy hiểm, và tại sao cách dùng execute([$ten]) (Prepared Statement) lại an
+toàn hơn?")
