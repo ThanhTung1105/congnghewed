@@ -1,7 +1,7 @@
 <?php
 // === THIẾT LẬP KẾT NỐI PDO ===
 $host = '127.0.0.1'; 
-$dbname = 'cse485_web'; // Đảm bảo bạn đã tạo Database tên này
+$dbname = 'cse485_web'; 
 $username = 'root'; 
 $password = ''; 
 $dsn = "mysql:host=$host;dbname=$dbname;charset=utf8mb4";
@@ -14,8 +14,6 @@ try {
 } catch (PDOException $e) {
     die("Kết nối thất bại: " . $e->getMessage());
 }
-
-// === LOGIC THÊM SINH VIÊN (XỬ LÝ FORM POST) ===
 // TODO 2: Kiểm tra xem form đã được gửi đi
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ten_sinh_vien'])) {
     
@@ -35,7 +33,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ten_sinh_vien'])) {
     exit;
 }
 
-// === LOGIC LẤY DANH SÁCH SINH VIÊN (SELECT) ===
 // TODO 7: Viết câu lệnh SQL SELECT *
 $sql_select = "SELECT * FROM sinhvien ORDER BY ngay_tao DESC";
 
@@ -95,4 +92,5 @@ $stmt_select = $pdo->query($sql_select);
         ?>
     </table>
 </body>
+
 </html>
